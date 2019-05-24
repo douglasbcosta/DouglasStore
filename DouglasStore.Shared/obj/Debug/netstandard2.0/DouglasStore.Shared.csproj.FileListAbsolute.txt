@@ -1,0 +1,9 @@
+C:\Cursos\DouglasStore\DouglasStore.Shared\bin\Debug\netstandard2.0\DouglasStore.Shared.deps.json
+C:\Cursos\DouglasStore\DouglasStore.Shared\bin\Debug\netstandard2.0\DouglasStore.Shared.dll
+C:\Cursos\DouglasStore\DouglasStore.Shared\bin\Debug\netstandard2.0\DouglasStore.Shared.pdb
+C:\Cursos\DouglasStore\DouglasStore.Shared\obj\Debug\netstandard2.0\DouglasStore.Shared.csprojAssemblyReference.cache
+C:\Cursos\DouglasStore\DouglasStore.Shared\obj\Debug\netstandard2.0\DouglasStore.Shared.csproj.CoreCompileInputs.cache
+C:\Cursos\DouglasStore\DouglasStore.Shared\obj\Debug\netstandard2.0\DouglasStore.Shared.AssemblyInfoInputs.cache
+C:\Cursos\DouglasStore\DouglasStore.Shared\obj\Debug\netstandard2.0\DouglasStore.Shared.AssemblyInfo.cs
+C:\Cursos\DouglasStore\DouglasStore.Shared\obj\Debug\netstandard2.0\DouglasStore.Shared.dll
+C:\Cursos\DouglasStore\DouglasStore.Shared\obj\Debug\netstandard2.0\DouglasStore.Shared.pdb

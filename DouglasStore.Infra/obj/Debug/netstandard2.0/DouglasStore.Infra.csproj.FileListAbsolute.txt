@@ -1,0 +1,9 @@
+C:\Cursos\DouglasStore\DouglasStore.Infra\bin\Debug\netstandard2.0\DouglasStore.Infra.deps.json
+C:\Cursos\DouglasStore\DouglasStore.Infra\bin\Debug\netstandard2.0\DouglasStore.Infra.dll
+C:\Cursos\DouglasStore\DouglasStore.Infra\bin\Debug\netstandard2.0\DouglasStore.Infra.pdb
+C:\Cursos\DouglasStore\DouglasStore.Infra\obj\Debug\netstandard2.0\DouglasStore.Infra.csprojAssemblyReference.cache
+C:\Cursos\DouglasStore\DouglasStore.Infra\obj\Debug\netstandard2.0\DouglasStore.Infra.csproj.CoreCompileInputs.cache
+C:\Cursos\DouglasStore\DouglasStore.Infra\obj\Debug\netstandard2.0\DouglasStore.Infra.AssemblyInfoInputs.cache
+C:\Cursos\DouglasStore\DouglasStore.Infra\obj\Debug\netstandard2.0\DouglasStore.Infra.AssemblyInfo.cs
+C:\Cursos\DouglasStore\DouglasStore.Infra\obj\Debug\netstandard2.0\DouglasStore.Infra.dll
+C:\Cursos\DouglasStore\DouglasStore.Infra\obj\Debug\netstandard2.0\DouglasStore.Infra.pdb
