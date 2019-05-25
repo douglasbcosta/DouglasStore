@@ -1,3 +1,4 @@
+using DouglasStore.Domain.StoreContext.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DouglasStore.Tests
@@ -8,6 +9,7 @@ namespace DouglasStore.Tests
         [TestMethod]
         public void TestMethod1()
         {
+            var c = new Customer("","","","","","");
         }
     }
 }

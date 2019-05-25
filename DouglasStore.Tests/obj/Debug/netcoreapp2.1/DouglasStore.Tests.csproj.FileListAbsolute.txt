@@ -12,3 +12,6 @@ C:\Cursos\DouglasStore\DouglasStore.Tests\obj\Debug\netcoreapp2.1\DouglasStore.T
 C:\Cursos\DouglasStore\DouglasStore.Tests\obj\Debug\netcoreapp2.1\DouglasStore.Tests.AssemblyInfo.cs
 C:\Cursos\DouglasStore\DouglasStore.Tests\obj\Debug\netcoreapp2.1\DouglasStore.Tests.dll
 C:\Cursos\DouglasStore\DouglasStore.Tests\obj\Debug\netcoreapp2.1\DouglasStore.Tests.pdb
+C:\Cursos\DouglasStore\DouglasStore.Tests\bin\Debug\netcoreapp2.1\DouglasStore.Domain.dll
+C:\Cursos\DouglasStore\DouglasStore.Tests\bin\Debug\netcoreapp2.1\DouglasStore.Domain.pdb
+C:\Cursos\DouglasStore\DouglasStore.Tests\obj\Debug\netcoreapp2.1\DouglasStore.Tests.csproj.CopyComplete
