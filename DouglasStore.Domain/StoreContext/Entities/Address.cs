@@ -1,8 +1,9 @@
 using DouglasStore.Domain.StoreContext.Enums;
+using FluentValidator;
 
 namespace DouglasStore.Domain.StoreContext.Entities
 {
-    public class Address{
+    public class Address : Notifiable{
         public Address(string street, string number, string complement, string district, string city, string state, string country, string zipCode, EAddressType type)
         {
             Street = street;

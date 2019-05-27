@@ -1,9 +1,10 @@
 using System;
 using DouglasStore.Domain.StoreContext.Enums;
+using FluentValidator;
 
 namespace DouglasStore.Domain.StoreContext.Entities
 {
-    public class Delivery 
+    public class Delivery  : Notifiable
     {
         public Delivery(DateTime estimatedDeliveryDate)
         {
@@ -13,8 +14,8 @@ namespace DouglasStore.Domain.StoreContext.Entities
         }
 
         public DateTime CreateDate { get; private set; } 
-        public DateTime EstimatedDeliveryDate { get; set; }
-        public EDeliveryStatus Status{get; set;}
+        public DateTime EstimatedDeliveryDate { get; private set; }
+        public EDeliveryStatus Status{get; private set;}
 
         public void Ship(){
             Status = EDeliveryStatus.Shipped;

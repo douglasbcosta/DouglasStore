@@ -20,10 +20,10 @@ namespace DouglasStore.Tests
             var impressora = new Product("Impressora", "Impressora","image.png",539.90M, 1.0M);
             var cadeira = new Product("Cadeira", "Cadeira","image.png",559.90M, 1.0M);
 
-            order.AddItem(new OrderItem(mouse, 5));
-            order.AddItem(new OrderItem(teclado, 5));
-            order.AddItem(new OrderItem(impressora, 5));
-            order.AddItem(new OrderItem(cadeira, 5));
+            order.AddItem(mouse, 5);
+            order.AddItem(teclado, 5);
+            order.AddItem(impressora, 5);
+            order.AddItem(cadeira, 5);
             order.Place();
             
             order.Pay();

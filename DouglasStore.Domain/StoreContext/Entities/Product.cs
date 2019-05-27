@@ -1,6 +1,8 @@
+using FluentValidator;
+
 namespace DouglasStore.Domain.StoreContext.Entities
 {
-    public class Product 
+    public class Product : Notifiable
     {
         public Product(string title, string description, string images, decimal price, decimal quantityOnHand)
         {
@@ -16,6 +18,7 @@ namespace DouglasStore.Domain.StoreContext.Entities
         public string Images { get; set; }
         public decimal Price { get; private set; }
         public decimal QuantityOnHand { get; private set; }
+        
 
         public override string ToString(){
             return Title;
