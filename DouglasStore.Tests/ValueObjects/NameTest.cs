@@ -11,7 +11,6 @@ namespace DouglasStore.Tests.ValueObjects
         public void ShouldreturnNotificationWhenNameIsInvalid()
         {
             Name name = new Name("","Costa");
-            Assert.AreEqual(false, name.Valid);
             Assert.AreEqual(1, name.Notifications.Count);
         }
     }
