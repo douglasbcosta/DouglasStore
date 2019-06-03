@@ -11798,7 +11798,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dougl\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -11807,14 +11807,14 @@
       "projectUniqueName": "C:\\Cursos\\DouglasStore\\DouglasStore.Api\\DouglasStore.Api.csproj",
       "projectName": "DouglasStore.Api",
       "projectPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Api\\DouglasStore.Api.csproj",
-      "packagesPath": "C:\\Users\\dougl\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\dougl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -7,3 +7,12 @@ C:\Cursos\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore
 C:\Cursos\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore.Domain.AssemblyInfo.cs
 C:\Cursos\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore.Domain.dll
 C:\Cursos\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore.Domain.pdb
+C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Domain\bin\Debug\netstandard2.0\DouglasStore.Domain.deps.json
+C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Domain\bin\Debug\netstandard2.0\DouglasStore.Domain.dll
+C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Domain\bin\Debug\netstandard2.0\DouglasStore.Domain.pdb
+C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore.Domain.csprojAssemblyReference.cache
+C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore.Domain.csproj.CoreCompileInputs.cache
+C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore.Domain.AssemblyInfoInputs.cache
+C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore.Domain.AssemblyInfo.cs
+C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore.Domain.dll
+C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore.Domain.pdb
