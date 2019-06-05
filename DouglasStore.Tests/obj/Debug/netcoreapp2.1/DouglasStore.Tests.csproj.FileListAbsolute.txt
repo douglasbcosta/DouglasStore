@@ -32,3 +32,5 @@ C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Tests\obj\Debug\netcoreapp2.1\D
 C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Tests\obj\Debug\netcoreapp2.1\DouglasStore.Tests.csproj.CopyComplete
 C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Tests\obj\Debug\netcoreapp2.1\DouglasStore.Tests.dll
 C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Tests\obj\Debug\netcoreapp2.1\DouglasStore.Tests.pdb
+C:\Cursos\DouglasStore\DouglasStore.Tests\bin\Debug\netcoreapp2.1\DouglasStore.Shared.dll
+C:\Cursos\DouglasStore\DouglasStore.Tests\bin\Debug\netcoreapp2.1\DouglasStore.Shared.pdb

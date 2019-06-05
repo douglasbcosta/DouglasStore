@@ -1024,10 +1024,16 @@
       },
       "DouglasStore.Domain/1.0.0": {
         "dependencies": {
+          "DouglasStore.Shared": "1.0.0",
           "FluentValidator": "2.0.4"
         },
         "runtime": {
           "DouglasStore.Domain.dll": {}
+        }
+      },
+      "DouglasStore.Shared/1.0.0": {
+        "runtime": {
+          "DouglasStore.Shared.dll": {}
         }
       }
     }
@@ -1536,6 +1542,11 @@
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
     },
     "DouglasStore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DouglasStore.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

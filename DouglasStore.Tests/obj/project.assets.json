@@ -1634,6 +1634,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "DouglasStore.Shared": "1.0.0",
           "FluentValidator": "2.0.4"
         },
         "compile": {
@@ -1641,6 +1642,16 @@
         },
         "runtime": {
           "bin/placeholder/DouglasStore.Domain.dll": {}
+        }
+      },
+      "DouglasStore.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/DouglasStore.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DouglasStore.Shared.dll": {}
         }
       }
     }
@@ -5846,6 +5857,11 @@
       "type": "project",
       "path": "../DouglasStore.Domain/DouglasStore.Domain.csproj",
       "msbuildProject": "../DouglasStore.Domain/DouglasStore.Domain.csproj"
+    },
+    "DouglasStore.Shared/1.0.0": {
+      "type": "project",
+      "path": "../DouglasStore.Shared/DouglasStore.Shared.csproj",
+      "msbuildProject": "../DouglasStore.Shared/DouglasStore.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
