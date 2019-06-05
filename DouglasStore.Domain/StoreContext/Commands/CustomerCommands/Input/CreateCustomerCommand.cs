@@ -1,9 +1,10 @@
+using DouglasStore.Shared.Commands;
 using FluentValidator;
 using FluentValidator.Validation;
 
 namespace DouglasStore.Domain.StoreContext.CustomerCommands.Inputs{
 
-    public class CreateCustomerCommand : Notifiable{
+    public class CreateCustomerCommand : Notifiable, ICommand {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Document { get; set; }

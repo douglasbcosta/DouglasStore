@@ -37,6 +37,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "DouglasStore.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/DouglasStore.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DouglasStore.Shared.dll": {}
+        }
       }
     }
   },
@@ -195,10 +205,16 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "DouglasStore.Shared/1.0.0": {
+      "type": "project",
+      "path": "../DouglasStore.Shared/DouglasStore.Shared.csproj",
+      "msbuildProject": "../DouglasStore.Shared/DouglasStore.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "DouglasStore.Shared >= 1.0.0",
       "FluentValidator >= 2.0.4",
       "NETStandard.Library >= 2.0.3"
     ]
@@ -232,7 +248,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj": {
+              "projectPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

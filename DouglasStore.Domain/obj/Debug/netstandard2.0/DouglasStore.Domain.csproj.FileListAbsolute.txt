@@ -16,3 +16,6 @@ C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0
 C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore.Domain.AssemblyInfo.cs
 C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore.Domain.dll
 C:\Cursos\DouglasStore\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore.Domain.pdb
+C:\Cursos\DouglasStore\DouglasStore.Domain\bin\Debug\netstandard2.0\DouglasStore.Shared.dll
+C:\Cursos\DouglasStore\DouglasStore.Domain\bin\Debug\netstandard2.0\DouglasStore.Shared.pdb
+C:\Cursos\DouglasStore\DouglasStore.Domain\obj\Debug\netstandard2.0\DouglasStore.Domain.csproj.CopyComplete
