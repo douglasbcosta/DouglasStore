@@ -11,6 +11,7 @@ namespace DouglasStore.Domain.StoreContext.Entities
             Price = product.Price;
             if(Product.QuantityOnHand < quantity)
                 AddNotification("Quantity", "Produto fora de estoque");
+                product.DecreaseQuantity(quantity);
         }
 
         public Product Product { get; private set; }

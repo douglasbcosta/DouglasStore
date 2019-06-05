@@ -24,7 +24,8 @@ namespace DouglasStore.Tests.ValueObjects
             _mouse = new Product("Mouse gamer","Mouse gamer", "mouse.jpg", 99M, 10);
             _keyboard = new Product("Teclado","Mouse gamer", "mouse.jpg", 99M, 10);
             _chair = new Product("Cadeira","Mouse gamer", "mouse.jpg", 99M, 10);
-            _chair = new Product("Monitor","Mouse gamer", "mouse.jpg", 99M, 10);
+            _monitor = new Product("Monitor","Mouse gamer", "mouse.jpg", 99M, 10);
+           
         }
         [TestMethod]
         public void ShouldCreateOrderWhenValid()
