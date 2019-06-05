@@ -1,15 +1,16 @@
-
 using FluentValidator;
 using FluentValidator.Validation;
 
-namespace DouglasStore.Domain.StoreContext.ValueObjects
-{
-    public class  Name : Notifiable
-    {
-        public Name(string firstName, string lastName)
-        {
-            FirstName = firstName;
-            LastName = lastName;
+namespace DouglasStore.Domain.StoreContext.CustomerCommands.Inputs{
+
+    public class CreateCustomerCommand : Notifiable{
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Document { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+
+        public bool IsValid(){
 
             AddNotifications(new ValidationContract()
                 .Requires()
@@ -17,14 +18,10 @@ namespace DouglasStore.Domain.StoreContext.ValueObjects
                 .HasMaxLen(FirstName, 30, "FirstName", "O nome deve conter pelo menos 30 caracteres")
                 .HasMinLen(LastName, 3, "LastName", "O sobrenome deve conter pelo menos 3 caracteres")
                 .HasMaxLen(LastName, 30, "LastName", "O sobrenome deve conter pelo menos 30 caracteres")
+                .IsEmail(Email, "Email", "O E-mail é inválido")
+                .HasLen(Document, 11, "Document", "CPF inválido")
             );
-        }
-
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-
-        public override string ToString(){
-            return $"{FirstName} {LastName}";
+            return Valid;
         }
     }
 }
