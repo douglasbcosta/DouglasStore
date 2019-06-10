@@ -2,6 +2,30 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "FluentValidation/8.5.0-preview1": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
+      "FluentValidator/2.0.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -4333,10 +4357,69 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "DouglasStore.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DouglasStore.Shared": "1.0.0",
+          "FluentValidator": "2.0.4"
+        },
+        "compile": {
+          "bin/placeholder/DouglasStore.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DouglasStore.Domain.dll": {}
+        }
+      },
+      "DouglasStore.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "FluentValidation": "8.5.0-preview1",
+          "FluentValidator": "2.0.4"
+        },
+        "compile": {
+          "bin/placeholder/DouglasStore.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DouglasStore.Shared.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "FluentValidation/8.5.0-preview1": {
+      "sha512": "HctSlbIbYXPTVbnzWl0fxc3bGjMLCFlY7nEisPLAQCNpdqrUO3quMr39OvbjiwH2WCcvNsCcUAdlt7DSbunUqA==",
+      "type": "package",
+      "path": "fluentvalidation/8.5.0-preview1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentvalidation.8.5.0-preview1.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net45/FluentValidation.dll",
+        "lib/net45/FluentValidation.xml",
+        "lib/netstandard1.1/FluentValidation.dll",
+        "lib/netstandard1.1/FluentValidation.xml",
+        "lib/netstandard1.6/FluentValidation.dll",
+        "lib/netstandard1.6/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
+      ]
+    },
+    "FluentValidator/2.0.4": {
+      "sha512": "px1HWHYBD20PuCUgz/mEl/QcBsikW5nbdtR5whllwMIyJ4FJs03nGXe5ocHEre/x3CX72hJBnX7bteqkZwlcfA==",
+      "type": "package",
+      "path": "fluentvalidator/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentvalidator.2.0.4.nupkg.sha512",
+        "fluentvalidator.nuspec",
+        "lib/netstandard1.3/FluentValidator.dll"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "owAlEIUZXWSnkK8Z1c+zR47A0X6ykF4XjbPok4lQKNuciUfHLGPd6QnI+rt/8KlQ17PmF+I4S3f+m+Qe4IvViw==",
       "type": "package",
@@ -11788,17 +11871,30 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "DouglasStore.Domain/1.0.0": {
+      "type": "project",
+      "path": "../DouglasStore.Domain/DouglasStore.Domain.csproj",
+      "msbuildProject": "../DouglasStore.Domain/DouglasStore.Domain.csproj"
+    },
+    "DouglasStore.Shared/1.0.0": {
+      "type": "project",
+      "path": "../DouglasStore.Shared/DouglasStore.Shared.csproj",
+      "msbuildProject": "../DouglasStore.Shared/DouglasStore.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "DouglasStore.Domain >= 1.0.0",
+      "DouglasStore.Shared >= 1.0.0",
+      "FluentValidator >= 2.0.4",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\dougl\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -11807,14 +11903,14 @@
       "projectUniqueName": "C:\\Cursos\\DouglasStore\\DouglasStore.Api\\DouglasStore.Api.csproj",
       "projectName": "DouglasStore.Api",
       "projectPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Api\\DouglasStore.Api.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\dougl\\.nuget\\packages\\",
       "outputPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dougl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11826,7 +11922,14 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj": {
+              "projectPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj"
+            },
+            "C:\\Cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj": {
+              "projectPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -11838,6 +11941,10 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "FluentValidator": {
+            "target": "Package",
+            "version": "[2.0.4, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",

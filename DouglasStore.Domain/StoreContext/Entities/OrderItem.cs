@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using DouglasStore.Shared.Entities;
 using FluentValidator;
 
 namespace DouglasStore.Domain.StoreContext.Entities
 {
-    public class OrderItem : Notifiable{
+    public class OrderItem : Entity{
         public OrderItem(Product product, decimal quantity)
         {
             Product = product;

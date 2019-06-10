@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "b8b445e9af2290067de0b21c4c21c5e2ff997d0a"
+    "signature": "0e66aa17ec9f718db1046feac8b3762f7701b3bc"
   },
   "compilationOptions": {},
   "targets": {
@@ -15,6 +15,17 @@
         },
         "runtime": {
           "DouglasStore.Domain.dll": {}
+        }
+      },
+      "FluentValidation/8.5.0-preview1": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.5.0.0"
+          }
         }
       },
       "FluentValidator/2.0.4": {
@@ -34,7 +45,19 @@
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
       },
+      "System.ComponentModel.Annotations/4.4.1": {
+        "runtime": {
+          "lib/netstandard2.0/System.ComponentModel.Annotations.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.6.25921.2"
+          }
+        }
+      },
       "DouglasStore.Shared/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "8.5.0-preview1",
+          "FluentValidator": "2.0.4"
+        },
         "runtime": {
           "DouglasStore.Shared.dll": {}
         }
@@ -46,6 +69,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FluentValidation/8.5.0-preview1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HctSlbIbYXPTVbnzWl0fxc3bGjMLCFlY7nEisPLAQCNpdqrUO3quMr39OvbjiwH2WCcvNsCcUAdlt7DSbunUqA==",
+      "path": "fluentvalidation/8.5.0-preview1",
+      "hashPath": "fluentvalidation.8.5.0-preview1.nupkg.sha512"
     },
     "FluentValidator/2.0.4": {
       "type": "package",
@@ -67,6 +97,13 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ToiYqSCioqhtspq2O/jYKtyTC/T0uwWHBTYlzCi6PRbSSHArN1IaRWeHffDamvms5sye5FDUWCfNZgubQpNRsA==",
+      "path": "system.componentmodel.annotations/4.4.1",
+      "hashPath": "system.componentmodel.annotations.4.4.1.nupkg.sha512"
     },
     "DouglasStore.Shared/1.0.0": {
       "type": "project",

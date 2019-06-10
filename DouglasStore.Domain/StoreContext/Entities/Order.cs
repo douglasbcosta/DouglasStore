@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DouglasStore.Domain.StoreContext.Enums;
+using DouglasStore.Shared.Entities;
 using FluentValidator;
 
 namespace DouglasStore.Domain.StoreContext.Entities
 {
-    public class Order: Notifiable{
+    public class Order: Entity{
         private readonly IList<OrderItem> _items;
         private readonly IList<Delivery> _deliveries;
         public Order(Customer custumer)

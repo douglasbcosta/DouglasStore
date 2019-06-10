@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using DouglasStore.Domain.StoreContext.ValueObjects;
+using DouglasStore.Shared.Entities;
 using FluentValidator;
 
 namespace DouglasStore.Domain.StoreContext.Entities
 {
-    public class Customer : Notifiable{
+    public class Customer : Entity{
         private readonly IList<Address> _addresses;
         public Customer(Name name, Document document, Email email, string phone)
         {

@@ -1,8 +1,9 @@
+using DouglasStore.Shared.Entities;
 using FluentValidator;
 
 namespace DouglasStore.Domain.StoreContext.Entities
 {
-    public class Product : Notifiable
+    public class Product : Entity
     {
         public Product(string title, string description, string images, decimal price, decimal quantityOnHand)
         {

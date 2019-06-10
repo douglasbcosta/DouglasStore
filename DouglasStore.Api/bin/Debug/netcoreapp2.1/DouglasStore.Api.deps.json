@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "e071b1a7c9d575b1b3d9ba6c9a1be1d9c6701ca2"
+    "signature": "9499d5e51650f3a59dfadc87003240408406aa48"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,9 @@
     ".NETCoreApp,Version=v2.1": {
       "DouglasStore.Api/1.0.0": {
         "dependencies": {
+          "DouglasStore.Domain": "1.0.0",
+          "DouglasStore.Shared": "1.0.0",
+          "FluentValidator": "2.0.4",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0"
@@ -33,6 +36,34 @@
         },
         "compile": {
           "DouglasStore.Api.dll": {}
+        }
+      },
+      "FluentValidation/8.5.0-preview1": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.5.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
+      "FluentValidator/2.0.4": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.3/FluentValidator.dll": {
+            "assemblyVersion": "2.0.4.0",
+            "fileVersion": "2.0.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -205,6 +236,30 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0"
+        }
+      },
+      "DouglasStore.Domain/1.0.0": {
+        "dependencies": {
+          "DouglasStore.Shared": "1.0.0",
+          "FluentValidator": "2.0.4"
+        },
+        "runtime": {
+          "DouglasStore.Domain.dll": {}
+        },
+        "compile": {
+          "DouglasStore.Domain.dll": {}
+        }
+      },
+      "DouglasStore.Shared/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "8.5.0-preview1",
+          "FluentValidator": "2.0.4"
+        },
+        "runtime": {
+          "DouglasStore.Shared.dll": {}
+        },
+        "compile": {
+          "DouglasStore.Shared.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3155,6 +3210,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "FluentValidation/8.5.0-preview1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HctSlbIbYXPTVbnzWl0fxc3bGjMLCFlY7nEisPLAQCNpdqrUO3quMr39OvbjiwH2WCcvNsCcUAdlt7DSbunUqA==",
+      "path": "fluentvalidation/8.5.0-preview1",
+      "hashPath": "fluentvalidation.8.5.0-preview1.nupkg.sha512"
+    },
+    "FluentValidator/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-px1HWHYBD20PuCUgz/mEl/QcBsikW5nbdtR5whllwMIyJ4FJs03nGXe5ocHEre/x3CX72hJBnX7bteqkZwlcfA==",
+      "path": "fluentvalidator/2.0.4",
+      "hashPath": "fluentvalidator.2.0.4.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3210,6 +3279,16 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "DouglasStore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DouglasStore.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

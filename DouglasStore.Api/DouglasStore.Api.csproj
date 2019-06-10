@@ -9,8 +9,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidator" Version="2.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DouglasStore.Domain\DouglasStore.Domain.csproj" />
+    <ProjectReference Include="..\DouglasStore.Shared\DouglasStore.Shared.csproj" />
+    <ProjectReference Include="..\DouglasStore.Infra\DouglasStore.Infra.csproj" />
   </ItemGroup>
 
 </Project>

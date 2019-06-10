@@ -7,3 +7,8 @@ C:\Cursos\DouglasStore\DouglasStore.Infra\obj\Debug\netstandard2.0\DouglasStore.
 C:\Cursos\DouglasStore\DouglasStore.Infra\obj\Debug\netstandard2.0\DouglasStore.Infra.AssemblyInfo.cs
 C:\Cursos\DouglasStore\DouglasStore.Infra\obj\Debug\netstandard2.0\DouglasStore.Infra.dll
 C:\Cursos\DouglasStore\DouglasStore.Infra\obj\Debug\netstandard2.0\DouglasStore.Infra.pdb
+C:\Cursos\DouglasStore\DouglasStore.Infra\bin\Debug\netstandard2.0\DouglasStore.Shared.dll
+C:\Cursos\DouglasStore\DouglasStore.Infra\bin\Debug\netstandard2.0\DouglasStore.Shared.pdb
+C:\Cursos\DouglasStore\DouglasStore.Infra\obj\Debug\netstandard2.0\DouglasStore.Infra.csproj.CopyComplete
+C:\Cursos\DouglasStore\DouglasStore.Infra\bin\Debug\netstandard2.0\DouglasStore.Domain.dll
+C:\Cursos\DouglasStore\DouglasStore.Infra\bin\Debug\netstandard2.0\DouglasStore.Domain.pdb
