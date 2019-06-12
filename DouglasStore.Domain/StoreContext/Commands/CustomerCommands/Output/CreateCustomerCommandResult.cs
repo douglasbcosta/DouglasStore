@@ -7,26 +7,15 @@ using FluentValidator.Validation;
 namespace DouglasStore.Domain.StoreContext.CustomerCommands.Inputs{
 
     public class CreateCustomerCommandResult : ICommandResult {
-        public CreateCustomerCommandResult(Guid id, string name, string document, string email, string phone)
+        public CreateCustomerCommandResult(bool success, string message, object data)
         {
-            Id = id;
-            Name = name;
-            Document = document;
-            Email = email;
-            Phone = phone;
+            Success = success;
+            Message = message;
+            Data = data;
         }
 
-        public CreateCustomerCommandResult()
-        {
-            
-        }
-
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Document { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
-
-        
+        public bool Success { get; set; }
+        public string Message { get; set; }
+        public object Data { get; set; }
     }
 }

@@ -42,7 +42,9 @@ namespace DouglasStore.Domain.StoreContext.Handlers{
             _repository.Save(customer);
             _emailService.Send(email.Address, "hello@teste.com","Bem vindo", "Seja bem vindo(a) ao DouglasStore");
 
-            return new CreateCustomerCommandResult(customer.Id, name.ToString(), document.ToString(), email.ToString(), command.Phone);
+            return new CreateCustomerCommandResult(true, "Bem vindo ao Douglas Store", new {
+                Id = customer.Id, Name = customer.Name, Email = customer.Email, Phone = customer.Phone
+            });
         }
 
         public ICommandResult Handle(AddAddressCommand command)

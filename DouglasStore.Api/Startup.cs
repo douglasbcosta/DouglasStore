@@ -17,6 +17,8 @@ namespace DouglasStore.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddResponseCompression();
+            
             services.AddScoped<DouglasDataContext,DouglasDataContext>();
             services.AddTransient<ICustomerRepository, CustomerRepository>();
             services.AddTransient<IEmailService, EmailService>();
@@ -27,7 +29,9 @@ namespace DouglasStore.Api
         {
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
+
             app.UseMvc();
+            app.UseResponseCompression();
         }
     }
 }

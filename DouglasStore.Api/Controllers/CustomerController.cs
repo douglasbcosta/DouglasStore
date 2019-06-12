@@ -20,7 +20,8 @@ namespace  DouglasStore.Api.Controllers
             _handler = handler;
         }
         [HttpGet]
-        [Route("v1/customers")]        
+        [Route("v1/customers")]      
+        [ResponseCache(Location = ResponseCacheLocation.Client ,Duration = 60)]  
         public IEnumerable<ListCustomerQueryResult> Get(){
             return _repository.Get();
         }
@@ -58,7 +59,7 @@ namespace  DouglasStore.Api.Controllers
         }
 
         [HttpDelete]
-        [Route("v1/customers/{id}")]
+        [Route("v1/customers/{id}")] 
         public object Delete(Guid id){
             return new {message = "Cliente removido com sucesso"};
         }
@@ -70,4 +71,4 @@ namespace  DouglasStore.Api.Controllers
         }
 
     }
-}
+} 
