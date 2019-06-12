@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using DouglasStore.Domain.StoreContext.CustomerCommands.Inputs;
 using DouglasStore.Domain.StoreContext.Entities;
 using DouglasStore.Domain.StoreContext.Handlers;
@@ -19,9 +21,29 @@ namespace DouglasStore.Tests{
             return false;
         }
 
+        public IEnumerable<ListCustomerQueryResult> Get()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public GetCustomerQueryResult GetByDocument(string document)
+        {
+            throw new NotImplementedException();
+        }
+
+        public GetCustomerQueryResult GetById(Guid Id)
+        {
+            throw new NotImplementedException();
+        }
+
         public CustomerOrdersCountResult GetCustomerOrdersCount(string document)
         {
             throw new System.NotImplementedException();
+        }
+
+        public IEnumerable<ListCustomerOrdersQueryResult> GetOrders(Guid Id)
+        {
+            throw new NotImplementedException();
         }
 
         public void Save(Customer Customer)

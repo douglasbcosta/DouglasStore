@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using Dapper;
@@ -34,6 +36,33 @@ namespace DouglasStore.Infra.Repositories{
             ).FirstOrDefault();
         }
 
+        public IEnumerable<ListCustomerQueryResult> Get()
+        {
+            return
+                _context.Connection.Query<ListCustomerQueryResult>(
+                    "SELECT [Id], CONCAT([FirstName],' '[LastName]) AS [Name], [Document], [Email] FROM Customer",
+                    new {}
+                );
+        }
+
+        public GetCustomerQueryResult GetById(Guid Id)
+        {
+            return
+                _context.Connection.Query<GetCustomerQueryResult>(
+                    "SELECT [Id], CONCAT([FirstName],' '[LastName]) AS [Name], [Document], [Email] FROM Customer Where [Id] = @Id",
+                    new {Id = Id}
+                ).FirstOrDefault();
+        }
+
+        public GetCustomerQueryResult GetByDocument(string document)
+        {
+            return
+                _context.Connection.Query<GetCustomerQueryResult>(
+                    "SELECT [Id], CONCAT([FirstName],' '[LastName]) AS [Name], [Document], [Email] FROM Customer Where [Document] = @Document",
+                    new {Document = document}
+                ).FirstOrDefault();
+        }
+
         public CustomerOrdersCountResult GetCustomerOrdersCount(string document)
         {
             return _context.
@@ -43,6 +72,16 @@ namespace DouglasStore.Infra.Repositories{
                     commandType : CommandType.StoredProcedure
             ).FirstOrDefault();
         
+        }
+
+        public IEnumerable<ListCustomerOrdersQueryResult> GetOrders(Guid Id)
+        {
+            return
+                _context.Connection.Query<ListCustomerOrdersQueryResult>(
+                    "SELECT [Id], COUNT(Id) AS Total, CONCAT([FirstName],' '[LastName]) AS [Name], [Document], [Email]"
+                     + " FROM Customer Where [Id] = @Id",
+                    new { Id = Id}
+                );
         }
 
         public void Save(Customer Customer)

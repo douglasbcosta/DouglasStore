@@ -17,3 +17,5 @@ C:\Cursos\DouglasStore\DouglasStore.Api\bin\Debug\netcoreapp2.1\DouglasStore.Sha
 C:\Cursos\DouglasStore\DouglasStore.Api\bin\Debug\netcoreapp2.1\DouglasStore.Domain.pdb
 C:\Cursos\DouglasStore\DouglasStore.Api\bin\Debug\netcoreapp2.1\DouglasStore.Shared.pdb
 C:\Cursos\DouglasStore\DouglasStore.Api\obj\Debug\netcoreapp2.1\DouglasStore.Api.csproj.CopyComplete
+C:\cursos\DouglasStore\DouglasStore.Api\bin\Debug\netcoreapp2.1\DouglasStore.Infra.dll
+C:\cursos\DouglasStore\DouglasStore.Api\bin\Debug\netcoreapp2.1\DouglasStore.Infra.pdb

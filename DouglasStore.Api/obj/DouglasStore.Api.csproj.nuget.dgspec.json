@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Cursos\\DouglasStore\\DouglasStore.Api\\DouglasStore.Api.csproj": {}
+    "C:\\cursos\\DouglasStore\\DouglasStore.Api\\DouglasStore.Api.csproj": {}
   },
   "projects": {
-    "C:\\Cursos\\DouglasStore\\DouglasStore.Api\\DouglasStore.Api.csproj": {
+    "C:\\cursos\\DouglasStore\\DouglasStore.Api\\DouglasStore.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Cursos\\DouglasStore\\DouglasStore.Api\\DouglasStore.Api.csproj",
+        "projectUniqueName": "C:\\cursos\\DouglasStore\\DouglasStore.Api\\DouglasStore.Api.csproj",
         "projectName": "DouglasStore.Api",
-        "projectPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Api\\DouglasStore.Api.csproj",
-        "packagesPath": "C:\\Users\\dougl\\.nuget\\packages\\",
-        "outputPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Api\\obj\\",
+        "projectPath": "C:\\cursos\\DouglasStore\\DouglasStore.Api\\DouglasStore.Api.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\cursos\\DouglasStore\\DouglasStore.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dougl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,11 +30,14 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj": {
-                "projectPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj"
+              "C:\\cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj": {
+                "projectPath": "C:\\cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj"
               },
-              "C:\\Cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj": {
-                "projectPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj"
+              "C:\\cursos\\DouglasStore\\DouglasStore.Infra\\DouglasStore.Infra.csproj": {
+                "projectPath": "C:\\cursos\\DouglasStore\\DouglasStore.Infra\\DouglasStore.Infra.csproj"
+              },
+              "C:\\cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj": {
+                "projectPath": "C:\\cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj"
               }
             }
           }
@@ -77,20 +80,20 @@
         }
       }
     },
-    "C:\\Cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj": {
+    "C:\\cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj",
+        "projectUniqueName": "C:\\cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj",
         "projectName": "DouglasStore.Domain",
-        "projectPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj",
-        "packagesPath": "C:\\Users\\dougl\\.nuget\\packages\\",
-        "outputPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Domain\\obj\\",
+        "projectPath": "C:\\cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\cursos\\DouglasStore\\DouglasStore.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dougl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,8 +106,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj": {
-                "projectPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj"
+              "C:\\cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj": {
+                "projectPath": "C:\\cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj"
               }
             }
           }
@@ -137,20 +140,83 @@
         }
       }
     },
-    "C:\\Cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj": {
+    "C:\\cursos\\DouglasStore\\DouglasStore.Infra\\DouglasStore.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj",
-        "projectName": "DouglasStore.Shared",
-        "projectPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj",
-        "packagesPath": "C:\\Users\\dougl\\.nuget\\packages\\",
-        "outputPath": "C:\\Cursos\\DouglasStore\\DouglasStore.Shared\\obj\\",
+        "projectUniqueName": "C:\\cursos\\DouglasStore\\DouglasStore.Infra\\DouglasStore.Infra.csproj",
+        "projectName": "DouglasStore.Infra",
+        "projectPath": "C:\\cursos\\DouglasStore\\DouglasStore.Infra\\DouglasStore.Infra.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\cursos\\DouglasStore\\DouglasStore.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dougl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj": {
+                "projectPath": "C:\\cursos\\DouglasStore\\DouglasStore.Domain\\DouglasStore.Domain.csproj"
+              },
+              "C:\\cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj": {
+                "projectPath": "C:\\cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[1.60.9, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj",
+        "projectName": "DouglasStore.Shared",
+        "projectPath": "C:\\cursos\\DouglasStore\\DouglasStore.Shared\\DouglasStore.Shared.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\cursos\\DouglasStore\\DouglasStore.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
