@@ -12136,7 +12136,7 @@
       "DouglasStore.Domain >= 1.0.0",
       "DouglasStore.Infra >= 1.0.0",
       "DouglasStore.Shared >= 1.0.0",
-      "Elmah.Io.AspNetCore",
+      "Elmah.Io.AspNetCore >= 3.6.63",
       "FluentValidator >= 2.0.4",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
@@ -12197,7 +12197,7 @@
         "dependencies": {
           "Elmah.Io.AspNetCore": {
             "target": "Package",
-            "version": "(, )"
+            "version": "[3.6.63, )"
           },
           "FluentValidator": {
             "target": "Package",

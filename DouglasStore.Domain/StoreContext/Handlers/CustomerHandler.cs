@@ -50,6 +50,46 @@ namespace DouglasStore.Domain.StoreContext.Handlers{
             });
         }
 
+        public ICommandResult Handle(UpdateCustomerCommand command)
+        {
+            if(_repository.CheckEmailUpdate(command.Email))
+                AddNotification("Email","Este Email já está em uso");
+
+            var currentCustomer = _repository.GetById(command.Id);                 
+            var name = new Name(currentCustomer.FirstName, currentCustomer.LastName);
+            var email = new Email(currentCustomer.Email);
+
+            var customer = new Customer(_repository.GetById(command.Id), command.Id);
+            customer.Update(name, email, command.Phone);
+
+            AddNotifications(name,  email, customer);
+
+            if(Invalid)
+                return new UpdateCustomerCommandResult(false, "Por favor, corrija os campos abaixo", Notifications);
+
+            _repository.Update(customer);
+            _emailService.Send(email.Address, "hello@teste.com","Bem vindo", "Alteração de cadastro realizada com sucesso");
+
+            return new UpdateCustomerCommandResult(true, "Alteração de cadastro realizada com sucesso", new {
+                Id = customer.Id, 
+                Name = customer.Name, 
+                Email = customer.Email, 
+                Phone = customer.Phone
+            });
+        }
+
+        public ICommandResult Handle(DeleteCustomerCommand command)
+        {
+            if(_repository.CheckId(command.Id))
+                AddNotification("Id","Usuário não encontrado");
+
+            if(Invalid)
+                return new DeleteCustomerCommandResult(false, "Erro ao deletar o cadastro", Notifications);
+
+            _repository.Delete(command.Id);
+
+            return new DeleteCustomerCommandResult(true, "Cadastro removido com sucesso", null);
+        }
         public ICommandResult Handle(AddAddressCommand command)
         {
             throw new System.NotImplementedException();

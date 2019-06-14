@@ -8,6 +8,11 @@ namespace DouglasStore.Shared.Entities{
         {
             Id = Guid.NewGuid();
         }
+
+        public Entity(Guid id)
+        {
+            Id = id;
+        }
         public Guid Id { get; private set; }
     } 
 }

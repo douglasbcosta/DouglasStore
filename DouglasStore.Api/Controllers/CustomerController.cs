@@ -48,19 +48,17 @@ namespace  DouglasStore.Api.Controllers
 
         [HttpPut]
         [Route("v1/customers/{id}")]
-        public Customer Put([FromBody]CreateCustomerCommand command){
+        public ICommandResult Put([FromBody]UpdateCustomerCommand command){
             
-            Name name = new Name(command.FirstName,command.LastName);
-            Document document = new Document(command.Document);
-            Email email = new Email(command.Email);
-            Customer customer = new Customer(name, document,email, command.Phone);
-            return customer;
+            var result = (UpdateCustomerCommandResult)_handler.Handle(command);
+            return result;
         }
 
         [HttpDelete]
         [Route("v1/customers/{id}")] 
-        public object Delete(Guid id){
-            return new {message = "Cliente removido com sucesso"};
+        public ICommandResult Delete([FromBody]DeleteCustomerCommand command){
+            var result = (DeleteCustomerCommandResult)_handler.Handle(command);
+            return result;
         }
 
         [HttpGet]

@@ -53,7 +53,7 @@
           "dependencies": {
             "Elmah.Io.AspNetCore": {
               "target": "Package",
-              "version": "(, )"
+              "version": "[3.6.63, )"
             },
             "FluentValidator": {
               "target": "Package",

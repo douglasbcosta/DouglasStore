@@ -21,6 +21,26 @@ namespace DouglasStore.Tests{
             return false;
         }
 
+        public bool CheckEmailUpdate(string email)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool CheckId(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CreateCustomerAddresses(Customer Customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<ListCustomerQueryResult> Get()
         {
             throw new System.NotImplementedException();
@@ -49,6 +69,11 @@ namespace DouglasStore.Tests{
         public void Save(Customer Customer)
         {
             
+        }
+
+        public void Update(Customer Customer)
+        {
+            throw new NotImplementedException();
         }
     }
 }

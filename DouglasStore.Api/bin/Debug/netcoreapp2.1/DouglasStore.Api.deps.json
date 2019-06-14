@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "c9773ec3aed9874e54a7fb306e729ad689103e58"
+    "signature": "4fbb6ae17850f17267ff4212e636670c1472dfae"
   },
   "compilationOptions": {
     "defines": [
@@ -27,6 +27,7 @@
           "DouglasStore.Domain": "1.0.0",
           "DouglasStore.Infra": "1.0.0",
           "DouglasStore.Shared": "1.0.0",
+          "Elmah.Io.AspNetCore": "3.6.63",
           "FluentValidator": "2.0.4",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
@@ -54,6 +55,37 @@
         },
         "compile": {
           "lib/netstandard2.0/Dapper.dll": {}
+        }
+      },
+      "Elmah.Io.AspNetCore/3.6.63": {
+        "dependencies": {
+          "Elmah.Io.Client": "3.3.58",
+          "Microsoft.AspNetCore.Http": "2.1.1",
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Elmah.Io.AspNetCore.dll": {
+            "assemblyVersion": "3.6.63.0",
+            "fileVersion": "3.6.63.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.1/Elmah.Io.AspNetCore.dll": {}
+        }
+      },
+      "Elmah.Io.Client/3.3.58": {
+        "dependencies": {
+          "Microsoft.Rest.ClientRuntime": "2.3.18",
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.4/Elmah.Io.Client.dll": {
+            "assemblyVersion": "3.3.58.0",
+            "fileVersion": "3.3.58.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.4/Elmah.Io.Client.dll": {}
         }
       },
       "FluentValidation/8.5.0-preview1": {
@@ -251,6 +283,21 @@
       },
       "Microsoft.NETCore.Platforms/2.1.0": {},
       "Microsoft.NETCore.Targets/2.1.0": {},
+      "Microsoft.Rest.ClientRuntime/2.3.18": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.3.18.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.dll": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0"
@@ -3356,6 +3403,20 @@
       "path": "dapper/1.60.9",
       "hashPath": "dapper.1.60.9.nupkg.sha512"
     },
+    "Elmah.Io.AspNetCore/3.6.63": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rSMgZpyO4CT//OSVG/RVe9/mkBeNmksQ3bP13Beeg/IrPSlbrNy84KrVdMCLFqFjd2coQ9gf2dfwlOqhTcZyQQ==",
+      "path": "elmah.io.aspnetcore/3.6.63",
+      "hashPath": "elmah.io.aspnetcore.3.6.63.nupkg.sha512"
+    },
+    "Elmah.Io.Client/3.3.58": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MD/pPjGflU0UEYgxbkUi2E3eMoNgfuqpElMTLRa/azQL4Ksp1QR+hIx/zMT2nz3aT8apOIGpebfI1qe8YzpHhQ==",
+      "path": "elmah.io.client/3.3.58",
+      "hashPath": "elmah.io.client.3.3.58.nupkg.sha512"
+    },
     "FluentValidation/8.5.0-preview1": {
       "type": "package",
       "serviceable": true,
@@ -3418,6 +3479,13 @@
       "sha512": "sha512-x188gIZXOwFXkPXyGavEcPGcR6RGvjFOES2QzskN4gERZjWPN34qhRsZVMC0CLJfQLGSButarcgWxPPM4vmg0w==",
       "path": "microsoft.netcore.targets/2.1.0",
       "hashPath": "microsoft.netcore.targets.2.1.0.nupkg.sha512"
+    },
+    "Microsoft.Rest.ClientRuntime/2.3.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-daE2vz5eNmiUbx8Lm0DArlKfKVtH3IzSteR0N+AJJ7cDgj32LcFudGx9Vm0bFelmiEZ3nO4Y7XTk2nfjUK/uCg==",
+      "path": "microsoft.rest.clientruntime/2.3.18",
+      "hashPath": "microsoft.rest.clientruntime.2.3.18.nupkg.sha512"
     },
     "NETStandard.Library/2.0.3": {
       "type": "package",

@@ -98,9 +98,42 @@ namespace DouglasStore.Infra.Repositories{
                     commandType : CommandType.StoredProcedure
             );
 
-            foreach(var address in Customer.Addresses){
+            CreateCustomerAddresses(Customer);
+
+        }
+        public void Update(Customer Customer)
+        {
+            _context.Connection.Execute("spUpdateCustomer",
+                new
+                {
+                    Id = Customer.Id,
+                    FistName = Customer.Name.FirstName,
+                    LastName = Customer.Name.LastName,
+                    Document = Customer.Document.Number,
+                    Email = Customer.Email.Address,
+                    Phone = Customer.Phone
+                },
+                    commandType: CommandType.StoredProcedure
+            );
+
+            _context.Connection.Execute("spDeleteCustomerAddressess",
+                new
+                {
+                    CustomerId = Customer.Id
+                },
+                commandType: CommandType.StoredProcedure
+            );
+
+            CreateCustomerAddresses(Customer);
+        }
+
+        public void CreateCustomerAddresses(Customer Customer)
+        {
+            foreach (var address in Customer.Addresses)
+            {
                 _context.Connection.Execute("spCreateAddress",
-                new { 
+                new
+                {
                     Id = address.Id,
                     CustomerId = Customer.Id,
                     Number = address.Number,
@@ -112,10 +145,25 @@ namespace DouglasStore.Infra.Repositories{
                     Country = address.Country,
                     ZipCode = address.ZipCode,
                     Type = address.Type
-                 },
-                    commandType : CommandType.StoredProcedure
+                },
+                    commandType: CommandType.StoredProcedure
                 );
             }
+        }
+
+        public bool CheckEmailUpdate(string email)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool CheckId(Guid id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
