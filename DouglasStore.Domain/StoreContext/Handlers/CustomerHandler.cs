@@ -37,13 +37,16 @@ namespace DouglasStore.Domain.StoreContext.Handlers{
             AddNotifications(name, document, email, customer);
 
             if(Invalid)
-                return null;
+                return new CreateCustomerCommandResult(false, "Por favor, corrija os campos abaixo", Notifications);
 
             _repository.Save(customer);
             _emailService.Send(email.Address, "hello@teste.com","Bem vindo", "Seja bem vindo(a) ao DouglasStore");
 
             return new CreateCustomerCommandResult(true, "Bem vindo ao Douglas Store", new {
-                Id = customer.Id, Name = customer.Name, Email = customer.Email, Phone = customer.Phone
+                Id = customer.Id, 
+                Name = customer.Name, 
+                Email = customer.Email, 
+                Phone = customer.Phone
             });
         }
 

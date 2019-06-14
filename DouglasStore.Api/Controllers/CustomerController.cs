@@ -6,6 +6,7 @@ using DouglasStore.Domain.StoreContext.Handlers;
 using DouglasStore.Domain.StoreContext.Queries;
 using DouglasStore.Domain.StoreContext.Repositories;
 using DouglasStore.Domain.StoreContext.ValueObjects;
+using DouglasStore.Shared.Commands;
 using Microsoft.AspNetCore.Mvc;
 
 namespace  DouglasStore.Api.Controllers
@@ -40,10 +41,8 @@ namespace  DouglasStore.Api.Controllers
 
         [HttpPost]
         [Route("v1/customers")]
-        public object Post([FromBody]CreateCustomerCommand command){
-            var result = (CreateCustomerCommand)_handler.Handle(command);
-            if(_handler.Invalid)
-                return BadRequest(_handler.Notifications);
+        public ICommandResult Post([FromBody]CreateCustomerCommand command){
+            var result = (CreateCustomerCommandResult)_handler.Handle(command);
             return result;
         }
 

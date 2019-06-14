@@ -1,12 +1,13 @@
-﻿using DouglasStore.Domain.StoreContext.Repositories;
+﻿
+using DouglasStore.Domain.StoreContext.Repositories;
 using DouglasStore.Domain.StoreContext.Services;
 using DouglasStore.Infra.DataContexts;
 using DouglasStore.Infra.Repositories;
 using DouglasStore.Infra.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Elmah.Io.AspNetCore;
 
 namespace DouglasStore.Api
 {
@@ -17,11 +18,17 @@ namespace DouglasStore.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
             services.AddResponseCompression();
             
             services.AddScoped<DouglasDataContext,DouglasDataContext>();
             services.AddTransient<ICustomerRepository, CustomerRepository>();
             services.AddTransient<IEmailService, EmailService>();
+            services.AddSwaggerGen(x => {
+                x.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info{Title = "Douglas Store", Version = "v1"});
+            });
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,6 +39,12 @@ namespace DouglasStore.Api
 
             app.UseMvc();
             app.UseResponseCompression();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>{
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Douglas Store - V1");
+            });
+
         }
     }
 }
