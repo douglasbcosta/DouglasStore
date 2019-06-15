@@ -40,7 +40,7 @@ namespace DouglasStore.Infra.Repositories{
         {
             return
                 _context.Connection.Query<ListCustomerQueryResult>(
-                    "SELECT [Id], CONCAT([FirstName],' '[LastName]) AS [Name], [Document], [Email] FROM Customer",
+                    "SELECT [Id], CONCAT([FirstName],' ',[LastName]) AS [Name], [Document], [Email], [Phone] FROM Customer",
                     new {}
                 );
         }
@@ -49,7 +49,7 @@ namespace DouglasStore.Infra.Repositories{
         {
             return
                 _context.Connection.Query<GetCustomerQueryResult>(
-                    "SELECT [Id], CONCAT([FirstName],' '[LastName]) AS [Name], [Document], [Email] FROM Customer Where [Id] = @Id",
+                    "SELECT [Id], [FirstName], [LastName], [Document], [Email], [Phone] FROM Customer Where [Id] = @Id",
                     new {Id = Id}
                 ).FirstOrDefault();
         }
@@ -78,7 +78,7 @@ namespace DouglasStore.Infra.Repositories{
         {
             return
                 _context.Connection.Query<ListCustomerOrdersQueryResult>(
-                    "SELECT [Id], COUNT(Id) AS Total, CONCAT([FirstName],' '[LastName]) AS [Name], [Document], [Email]"
+                    "SELECT [Id], COUNT(Id) AS Total, CONCAT([FirstName],' ',[LastName]) AS [Name], [Document], [Email]"
                      + " FROM Customer Where [Id] = @Id",
                     new { Id = Id}
                 );
@@ -87,13 +87,13 @@ namespace DouglasStore.Infra.Repositories{
         public void Save(Customer Customer)
         {
             _context.Connection.Execute("spCreateCustomer",
-                new { 
-                    Id = Customer.Id,
-                    FistName = Customer.Name.FirstName,
-                    LastName = Customer.Name.LastName,
+                new {
+                    Customer.Id,
+                    Customer.Name.FirstName,
+                    Customer.Name.LastName,
                     Document = Customer.Document.Number,
                     Email = Customer.Email.Address,
-                    Phone = Customer.Phone
+                    Customer.Phone
                  },
                     commandType : CommandType.StoredProcedure
             );
@@ -106,12 +106,11 @@ namespace DouglasStore.Infra.Repositories{
             _context.Connection.Execute("spUpdateCustomer",
                 new
                 {
-                    Id = Customer.Id,
-                    FistName = Customer.Name.FirstName,
-                    LastName = Customer.Name.LastName,
-                    Document = Customer.Document.Number,
+                    Customer.Id,
+                    Customer.Name.FirstName,
+                    Customer.Name.LastName,
                     Email = Customer.Email.Address,
-                    Phone = Customer.Phone
+                    Customer.Phone
                 },
                     commandType: CommandType.StoredProcedure
             );
@@ -151,19 +150,35 @@ namespace DouglasStore.Infra.Repositories{
             }
         }
 
-        public bool CheckEmailUpdate(string email)
+        public bool CheckEmailUpdate(string email, Guid id)
         {
-            throw new NotImplementedException();
+            return _context.
+                Connection.
+                Query<bool>(
+                    "spCheckEmailUpdate", new { Email = email, Id = id },
+                    commandType: CommandType.StoredProcedure
+            ).FirstOrDefault();
         }
 
         public void Delete(Guid id)
         {
-            throw new NotImplementedException();
+            _context.Connection.Execute("spDeleteCustomer",
+                new
+                {
+                    Id = id
+                },
+                commandType: CommandType.StoredProcedure
+            );
         }
 
         public bool CheckId(Guid id)
         {
-            throw new NotImplementedException();
+            return _context.
+                Connection.
+                Query<bool>(
+                    "spCheckId", new { Id = id },
+                    commandType: CommandType.StoredProcedure
+            ).FirstOrDefault();
         }
     }
 }

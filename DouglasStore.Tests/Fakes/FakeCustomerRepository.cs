@@ -26,6 +26,11 @@ namespace DouglasStore.Tests{
             throw new NotImplementedException();
         }
 
+        public bool CheckEmailUpdate(string email, Guid Id)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool CheckId(Guid id)
         {
             throw new NotImplementedException();

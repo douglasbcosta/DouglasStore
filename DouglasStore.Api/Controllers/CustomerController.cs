@@ -6,6 +6,7 @@ using DouglasStore.Domain.StoreContext.Handlers;
 using DouglasStore.Domain.StoreContext.Queries;
 using DouglasStore.Domain.StoreContext.Repositories;
 using DouglasStore.Domain.StoreContext.ValueObjects;
+using DouglasStore.Infra.Services;
 using DouglasStore.Shared.Commands;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,14 +16,14 @@ namespace  DouglasStore.Api.Controllers
     {
         private readonly ICustomerRepository _repository;
         private readonly CustomerHandler _handler;
-        public CustomerController(ICustomerRepository repository, CustomerHandler handler)
+        public CustomerController(ICustomerRepository repository)
         {
             _repository = repository;
-            _handler = handler;
+            _handler = new CustomerHandler(_repository, new EmailService());
         }
         [HttpGet]
-        [Route("v1/customers")]      
-        [ResponseCache(Location = ResponseCacheLocation.Client ,Duration = 60)]  
+        [Route("v1/customers")]        
+        [ResponseCache(Duration = 15, Location = ResponseCacheLocation.Client)]
         public IEnumerable<ListCustomerQueryResult> Get(){
             return _repository.Get();
         }

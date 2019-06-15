@@ -8,7 +8,7 @@ namespace DouglasStore.Domain.StoreContext.Repositories{
     {
         bool CheckDocument(string document);
         bool CheckEmail(string email);
-        bool CheckEmailUpdate(string email);
+        bool CheckEmailUpdate(string email, Guid Id);
         bool CheckId(Guid id);
         void Save(Customer Customer);
         void Update(Customer Customer);

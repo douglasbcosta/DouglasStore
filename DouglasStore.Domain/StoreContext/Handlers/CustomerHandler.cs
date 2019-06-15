@@ -1,6 +1,7 @@
 using System;
 using DouglasStore.Domain.StoreContext.CustomerCommands.Inputs;
 using DouglasStore.Domain.StoreContext.Entities;
+using DouglasStore.Domain.StoreContext.Queries;
 using DouglasStore.Domain.StoreContext.Repositories;
 using DouglasStore.Domain.StoreContext.Services;
 using DouglasStore.Domain.StoreContext.ValueObjects;
@@ -52,17 +53,24 @@ namespace DouglasStore.Domain.StoreContext.Handlers{
 
         public ICommandResult Handle(UpdateCustomerCommand command)
         {
-            if(_repository.CheckEmailUpdate(command.Email))
+            Customer customer = null;
+            if (_repository.CheckEmailUpdate(command.Email, command.Id))
                 AddNotification("Email","Este Email já está em uso");
 
-            var currentCustomer = _repository.GetById(command.Id);                 
-            var name = new Name(currentCustomer.FirstName, currentCustomer.LastName);
-            var email = new Email(currentCustomer.Email);
+            var currentCustomer = _repository.GetById(command.Id);
+            Name name = new Name(command.FirstName, command.LastName);
+            Email email = new Email(command.Email);
 
-            var customer = new Customer(_repository.GetById(command.Id), command.Id);
-            customer.Update(name, email, command.Phone);
-
-            AddNotifications(name,  email, customer);
+            if (currentCustomer == null)
+            {
+                AddNotification("Id", "Cadastro não encontrado");
+            }
+            else
+            {
+                customer = new Customer(currentCustomer, command.Id);
+                customer.Update(name, email, command.Phone);
+                AddNotifications(customer);
+            }
 
             if(Invalid)
                 return new UpdateCustomerCommandResult(false, "Por favor, corrija os campos abaixo", Notifications);
@@ -80,7 +88,7 @@ namespace DouglasStore.Domain.StoreContext.Handlers{
 
         public ICommandResult Handle(DeleteCustomerCommand command)
         {
-            if(_repository.CheckId(command.Id))
+            if(!_repository.CheckId(command.Id))
                 AddNotification("Id","Usuário não encontrado");
 
             if(Invalid)
